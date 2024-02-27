@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    background-image: url(../img/fondo.png);
+    background-size: cover;
+    width: 70%;
+    height: 100%;
+    min-height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+
+    border-left: 5px solid yellowgreen;
+    border-right: 5px solid yellowgreen;
+    
+}
+
+
+body{
+    background-color: green;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+
+#dvBtn{
+    padding-top: 20px;
+    text-align: center;
+    background-color: red;
+    margin: 0;
+    padding: 0;
+
+    
+}
+
+
+
+#aBtn{
+    font-size: 150px;
+}
+
+#aBtn:hover{
+    font-size: 200px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+
+#dvCreditos{
+    display: flex;
+    text-align:right ;
+    margin-right: 50px;
+    padding-top: 120px;
+
+}
+
+#btnCreditos{
+    font-weight: bold;
+    color: white;
+    background-color: red;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 15px;
+    height: 50px;
+    margin-top: 25px;
+    width: 200px;
+    border: none;
+    text-align: center;
+    margin-left: 30px;
+}
+
+#btnCreditos:hover{
+    font-size: 36px;
+    width: 400px;
+    height: 60px;
+    margin-top: 20px;
+    margin-left: 0;
+    text-align: center;
+}
+
+.txt{
+    padding-top: 100px;
+    color:blanchedalmond;
+    text-align: center;
+}
+
+.icons{
+    font-size: 100px;
+    display: flex;
+    padding-right: 450px;
+    
+}
+
+#iconoAudio{
+    margin-left: 50px;
+    margin-right: 50px;
+    cursor: pointer;
+
+}
+
+#iconoV{
+    width: 100px;
+    height: 100px;
+}
+
+#txt1 {
+    font-size: 50px;
+     text-shadow: 
+        -1px -1px 2px orange,  
+         1px -1px 2px orange,
+        -1px  1px 2px orange,
+         1px  1px 2px orange;  
+}
+
+#txt2 {
+    font-size: 100px;
+     text-shadow: 
+        -2px -2px 2px orange,  
+         2px -2px 2px orange,
+        -2px  2px 2px orange,
+         2px  2px 2px orange;  
+}
+
+/* .img2{
+    background-image: url(../img/musicMute.png);
+    height: 100px;
+    width: 100px;
+} */
