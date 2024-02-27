@@ -30,7 +30,6 @@ body{
 #dvBtn{
     padding-top: 20px;
     text-align: center;
-    background-color: red;
     margin: 0;
     padding: 0;
 
@@ -38,25 +37,27 @@ body{
 }
 
 
-
-#aBtn{
-    font-size: 150px;
-}
-
-#aBtn:hover{
+#aBtn {
     font-size: 200px;
-    padding-top: 0;
-    padding-bottom: 0;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    transition: transform 0.3s ease; 
+    text-decoration: none;
 }
 
+#aBtn:hover {
+    transform: scale(1.2); 
+}
 
-#dvCreditos{
+#dvCreditos {
     display: flex;
-    text-align:right ;
-    margin-right: 50px;
+    justify-content: flex-end; 
+    margin-right: calc(50px - 20px); 
     padding-top: 120px;
-
+    transition: margin-right 0.3s ease; 
 }
+
 
 #btnCreditos{
     font-weight: bold;
@@ -130,3 +131,4 @@ body{
     height: 100px;
     width: 100px;
 } */
+
