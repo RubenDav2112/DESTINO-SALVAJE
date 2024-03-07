@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESTINO SALVAJE</title>
+    <link rel="stylesheet" href="../css/inicio.css">
+    <script src="https://kit.fontawesome.com/a99fa1f648.js" crossorigin="anonymous"></script>
+    <script src="../js/inicio.js"></script>
+</head>
+<body>
+    <div class="container">
+       <div class="txt">
+            <h1 id="txt1">ENCUENTRA SU CASA</h1>
+            <h1 id="txt2">DESTINO SALVAJE</h1>
+        </div>
+        <div id="dvBtn">
+            <a href="#" id="aBtn"><i class="fa-solid fa-play" style="color:blanchedalmond"></i></a>
+        </div>
+        <div id="dvCreditos">
+            <div class="icons">
+                <a id="iconoAudio"  href="#" onclick="cambiarIcono()"><i id="iconoV" class="fa-solid fa-volume-high" style="color: red" ></i></a>
+                <a id="musicAudio" href="#" onclick="cambiarIconoM()"><img id="iconoM" src="../img/icons/music.png" alt="" width="100px" height="100px"></a>
+            </div>
+            <button id="btnCreditos" onclick="creditosF">CRÉDITOS</button>
+        </div>   
+    
+        <audio id="musicBack" loop>
+            <source src="ruta_de_tu_musica.mp3" type="audio/mp3">
+        </audio>
+    </div>
+</body>
+</html>
