@@ -22,12 +22,17 @@
                 <a id="iconoAudio"  href="#" onclick="cambiarIcono()"><i id="iconoV" class="fa-solid fa-volume-high" style="color: red" ></i></a>
                 <a id="musicAudio" href="#" onclick="cambiarIconoM()"><img id="iconoM" src="img/music.png" alt="" width="100px" height="100px"></a>
             </div>
-            <button id="btnCreditos" onclick="creditosF">CRÉDITOS</button>
+            <button id="btnCreditos" onclick="creditos()">CRÉDITOS</button>
         </div>   
     
         <audio id="musicBack" loop>
             <source src="ruta_de_tu_musica.mp3" type="audio/mp3">
         </audio>
     </div>
+    <script>
+        function creditos() {
+          window.location.href = 'creditos.html';
+        }
+    </script>
 </body>
 </html>
