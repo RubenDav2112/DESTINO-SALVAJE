@@ -15,10 +15,10 @@ function cambiarIconoM(){
     var imagenActual = musica.src;
 
     if(imagenActual.endsWith("music.png")){
-        musica.src = "img/musicMute.png";
+        musica.src = "../img/icons/musicMute.png";
         musicBack.pause();
     }else{
-        musica.src = "img/music.png";
+        musica.src = "../img/icons/music.png";
         musicBack.play();
     }    
     
