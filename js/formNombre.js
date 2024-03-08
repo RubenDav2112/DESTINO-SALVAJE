@@ -21,6 +21,6 @@ function guardarNombre() {
         }
         window.location.href = "comienzo.html?nombre=" + encodeURIComponent(nombre);
     } else {
-        alert("Ingrese un nombre válido.");
+        alert("Ingresa tu nombre amigo!");
     }
 }

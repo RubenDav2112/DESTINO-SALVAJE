@@ -34,5 +34,5 @@ function cambiarIconoM(){
 }
 
 function creditosF(){
-    window.location.href = "creditos.html";//Se debe cambiar no es el original
+    window.location.href = "creditos.html";
 }

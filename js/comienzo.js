@@ -39,5 +39,5 @@ window.onload = function() {
             ctx.fillText("No se encontró el jugador :( ", 10, 120);
         }
     };
-    fondo.src = 'img/marcoCarta.jpg'; 
+    fondo.src = '../img/marcoCarta.jpg'; 
 };
