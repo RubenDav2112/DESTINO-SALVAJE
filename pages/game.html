@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESTINO SALVAJE</title>
+    <link rel="stylesheet" href="../css/game.css">
+    <script src="https://kit.fontawesome.com/a99fa1f648.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="nav">
+        <div class="left txtNav"><p>TIEMPO</p></div>
+        <div class="middle txtNav"><p>PUNTOS: 0</p></div>
+        <div class="right icons">
+            <a id="iconoAudio" onclick="cambiarIcono()">
+                <i id="iconoV" class="fa-solid fa-volume-high" style="color: #ea2a15" ></i>
+            </a>
+        </div>
+        <div class="right icons">
+            <a id="musicAudio" onclick="cambiarIconoM()">
+                <img id="iconoM" src="../img/icons/music.png" alt="" width="100%">
+            </a>
+        </div>
+        <div class="right icons">
+            <a id="exitButton">
+                <i id="iconoExit" class="fa-solid fa-right-from-bracket" style="color: #ea2a15;"></i>
+            </a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="boxes" id="txt"><p>ARRASTRA EL ANIMAL HASTA SU HÁBITAD</p><P>¡NO OLVIDES PONERLE NOMBRE!</P></div>
+        <div class="boxes" id="animals">
+            <div class="animalBox"><img src="../img/animals/A.png" alt=""></div>
+            <div class="animalBox"><img src="../img/animals/B.png" alt=""></div>
+            <div class="animalBox"><img src="../img/animals/C.png" alt=""></div>
+        </div>
+        <div class="boxes" id="habitad">
+            <div class="habitadBox"><img src="../img/animals/AH.webp" alt=""></div>
+            <div class="habitadBox"><img src="../img/animals/BH.webp" alt=""></div>
+            <div class="habitadBox"><img src="../img/animals/CH.webp" alt=""></div>
+        </div>
+        <div class="boxes" id="forLabel">
+            <div class="forLabels"><button draggable="true" id="draggableButton"></button></div>
+            <div class="forLabels"><button draggable="true" id="draggableButton"></button></div>
+            <div class="forLabels"><button draggable="true" id="draggableButton"></button></div>
+        </div>
+        <div class="boxes" id="label">
+            <div class="labels"><button draggable="true" id="draggableButton">ÁGUILA</button></div>
+            <div class="labels"><button draggable="true" id="draggableButton">BÚFALO</button></div>
+            <div class="labels"><button draggable="true" id="draggableButton">COCODRILO</button></div>
+        </div>
+        <audio id="musicBack" loop>
+            <source src="ruta_de_tu_musica.mp3" type="audio/mp3">
+        </audio>
+    </div>
+</body>
+</html>
