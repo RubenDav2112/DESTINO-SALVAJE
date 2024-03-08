@@ -1,0 +1,59 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    color:green;
+}
+#titulo{
+    text-align: start;
+    text-shadow: 
+        -2px -2px 2px orange,  
+         2px -2px 2px orange,
+        -2px  2px 2px orange,
+         2px  2px 2px orange;
+    font-weight: bolder;
+    font-size: 50px;
+    text-decoration: underline #e36124;
+   
+}
+.titulo{
+    margin-left: 50px;
+}
+h3 {
+   
+    margin-left: 70px;
+    text-decoration: underline #e36124;
+    font-weight: bolder;
+    color: green;
+    font-size: large;
+}
+
+.container{
+    padding: 50px;
+    display: flex;
+}
+
+
+img {
+    margin-left: 80px;
+    
+}
+
+p{
+    color: green;
+    font-size: xx-small;
+}
+
+#nomJuego{
+    font-size: 70px;
+     text-shadow: 
+        -2px -2px 2px orange,  
+         2px -2px 2px orange,
+        -2px  2px 2px orange,
+         2px  2px 2px orange; 
+    text-align: center; 
+}
+
+h4,h5{
+    font-size: 20px;
+    color: green;
+}
