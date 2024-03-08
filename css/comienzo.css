@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: green;
+}
+
+#container{
+    background-image: url(../img/fondoForm.png);
+    background-size: cover;
+    width: 70%;
+    height: 100%;
+    min-height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    border-left: 5px solid yellowgreen;
+    border-right: 5px solid yellowgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#canvas{
+    border-radius: 10px;
+}
+
+a {
+    display: block;
+    width: 180px; 
+    height: 110px;
+    padding-bottom: 10px;
+    background-color: transparent; 
+    border: none;
+    border-radius: 50%; 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 15px;
+}
+
+a:hover {
+    transform: scale(1.05);
+}
+
+img {
+    width: 100%; 
+    height: 100%;
+    transition: transform 0.3s;
+    
+}
+
+button:hover img {
+    transform: scale(1.05); 
+}
