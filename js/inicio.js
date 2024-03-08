@@ -1,3 +1,12 @@
+
+var audio = document.getElementById('musicBack');
+var clicked = false;
+
+window.onclick = function() {
+    if(!clicked)
+        audio.play();
+}
+
 function cambiarIcono(){
     var icono = document.getElementById("iconoV");
     var claseActual = icono.className;
@@ -10,16 +19,16 @@ function cambiarIcono(){
 }
 
 function cambiarIconoM(){
-    var musicBack=document.getElementById("musicBack");
     var musica = document.getElementById("iconoM");
     var imagenActual = musica.src;
 
     if(imagenActual.endsWith("music.png")){
         musica.src = "../img/icons/musicMute.png";
-        musicBack.pause();
+        clicked=true;
+        audio.pause();
     }else{
         musica.src = "../img/icons/music.png";
-        musicBack.play();
+        audio.play();
     }    
     
 }
