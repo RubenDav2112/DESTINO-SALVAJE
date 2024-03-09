@@ -24,19 +24,6 @@ function startC(){
   cronometro.innerHTML =  (minutos < 10 ? "0" + minutos : minutos) + ":" + (segundos < 10 ? "0" + segundos : segundos);
 }
 
-/*function stopCron(){
-  clearInterval(intervalo);
-}*/
-
-
-/*function stopMusic(){
-    
-}*/
-
-
-
-
-
 //JUEGO
 //generar el vector con el orden de las imagenes
 
@@ -72,10 +59,6 @@ let incorrectAudio = new Audio("../audio/InGame/wrong.mp3");
 shuffleArray(arrayAnimals);
 shuffleArray(arrayDivs1);
 shuffleArray(arrayDivs2);
-
-
-
-
 
 
 //funcion para alocal las imagenes en los divs, e indicar a traves del id que imagen le fue asignada
