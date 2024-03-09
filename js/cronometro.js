@@ -1,4 +1,9 @@
 let intervalo;
+var segundos = 0;
+var minutos = 0;
+
+window.onload = startCron
+
 function startCron(){
     var segundos = 0;
     var minutos = 0;
@@ -12,8 +17,7 @@ function start(){
         segundos = 0;
         minutos++;
     }
-    var segundos = 0;
-    var minutos = 0;
+    
     var cronometro = document.getElementById("cronometro");
     cronometro.innerHTML =  (minutos < 10 ? "0" + minutos : minutos) + ":" + (segundos < 10 ? "0" + segundos : segundos);
 }

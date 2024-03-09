@@ -9,7 +9,7 @@
 </head>
 <body>
     <div id="nav">
-        <div class="left txtNav"><p>TIEMPO</p></div>
+        <div class="left txtNav"><p id="cronometro">00:00</p></div>
         <div class="middle txtNav"><p>PUNTOS: 0</p></div>
         <div class="right icons">
             <a id="iconoAudio" onclick="cambiarIcono()">
@@ -50,8 +50,11 @@
             <div class="labels"><button draggable="true" id="draggableButton">COCODRILO</button></div>
         </div>
         <audio id="musicBack" loop>
-            <source src="ruta_de_tu_musica.mp3" type="audio/mp3">
+            <source src="../audio/Lynyrd Skynyrd - Sweet Home Alabama (Audio).mp3" type="audio/mp3">
         </audio>
     </div>
+
+    <script src="../js/cronometro.js"></script>
+    <script src="../js/inicio.js"></script>
 </body>
 </html>
