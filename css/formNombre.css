@@ -7,11 +7,11 @@ body {
 }
 
 #container{
-    background-image: url(../img/fondoForm.png);
+    background-image: url(../img/background/fondoForm.png);
     background-size: cover;
     width: 65%; 
     height: 70%;
-    min-height: 95vh;
+    min-height: 100vh;
     margin-left: auto;
     margin-right: auto;
     padding: 0;

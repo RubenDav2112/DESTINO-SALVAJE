@@ -1,7 +1,7 @@
+var params = new URLSearchParams(window.location.search);
+var nombre = params.get('nombre');
+
 window.onload = function() {
-    var params = new URLSearchParams(window.location.search);
-    var nombre = params.get('nombre');
-    
     var canvas = document.getElementById('canvas');
     var ctx = canvas.getContext("2d");
     canvas.width = 800;
@@ -36,8 +36,14 @@ window.onload = function() {
                 }
             }
         } else {
-            ctx.fillText("No se encontró el jugador :( ", 10, 120);
+            ctx.font = "bold 40px Times New Roman";
+            ctx.fillText("No se encontró el jugador :( ", 150, 220);
+            ctx.fillText("Reinica el juego ", 250, 280);
         }
     };
-    fondo.src = '../img/marcoCarta.jpg'; 
+    fondo.src = '../img/background/marcoCarta.jpg'; 
 };
+
+function siguiente(){
+    window.location.href = "game.html?nombre=" + encodeURIComponent(nombre);
+}
