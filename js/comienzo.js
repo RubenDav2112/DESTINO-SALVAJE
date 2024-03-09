@@ -1,4 +1,8 @@
+
+
 window.onload = function() {
+    var audio = document.getElementById('musicBack');
+    audio.play();
     var params = new URLSearchParams(window.location.search);
     var nombre = params.get('nombre');
     
