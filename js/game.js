@@ -236,9 +236,9 @@ function drop(e,msg){
   }else{
     //bajar puntos
     if(level == 1){
-      puntos-=15;
+      puntos-=5;
     }else{
-      puntos-=20;
+      puntos-=5;
     }
 
     //SONIDO ERROR AQUÍ
