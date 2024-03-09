@@ -2,6 +2,11 @@
 var audio = document.getElementById('musicBack');
 var clicked = false;
 
+window.onload = function() {
+
+    audio.play();
+}
+
 window.onclick = function() {
     if(!clicked)
         audio.play();
