@@ -9,6 +9,7 @@
     width: 70%;
     height: 100%;
     min-height: 100vh;
+    max-height: 100vh;
     min-width: 150vh;
     max-width: 150vh;
     margin-left: auto;
@@ -50,9 +51,9 @@ body{
 #dvCreditos {
     display: flex;
     justify-content: flex-end; 
-    margin-right: calc(5vw - 3vw); 
-    padding-top: 20vh; 
+    margin-top: 12vh;
     transition: margin-right 0.3s ease; 
+    width: 100%;
 }
 
 #btnCreditos{
@@ -67,7 +68,7 @@ body{
     width: 12vw; 
     border: none;
     text-align: center;
-    margin-left: 3vw; 
+    margin-right: calc(2vw); 
 }
 
 #btnCreditos:hover{
@@ -84,7 +85,7 @@ body{
 .icons{
     font-size: 7vw; 
     display: flex;
-    padding-right: 55vw;
+    width: 100%;
 }
 
 #iconoAudio{
@@ -102,7 +103,7 @@ body{
 
 #iconoM{
     width: 5vw;
-    height: 10vh; 
+    height: 8vh; 
 }
 
 #txt1 {
