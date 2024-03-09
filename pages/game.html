@@ -14,12 +14,12 @@
         <div class="middle txtNav"><p id="puntos">PUNTOS: 0</p></div>
         <div class="right icons">
             <a id="iconoAudio" onclick="cambiarIcono()">
-                <i id="iconoV" class="fa-solid fa-volume-high" style="color: #ea2a15" ></i>
+                <i id="iconoV" class="fa-solid fa-volume-xmark" style="color: #ea2a15" ></i>
             </a>
         </div>
         <div class="right icons">
             <a id="musicAudio" onclick="cambiarIconoM()">
-                <img id="iconoM" src="../img/icons/music.png" alt="" width="100%">
+                <img id="iconoM" src="../img/icons/musicMute.png" alt="" width="100%">
             </a>
         </div>
         <div class="right icons">
@@ -50,13 +50,11 @@
             <div class="labels"><button id="eight" draggable="true" ondragstart="start(event,'moviendo pieza3')" ondragend="end(event)">BÚFALO</button></div>
             <div class="labels"><button id="nine" draggable="true" ondragstart="start(event,'moviendo pieza3')" ondragend="end(event)">COCODRILO</button></div>
         </div>
-        <audio id="musicBack" loop>
-            <source src="../audio/Lynyrd Skynyrd - Sweet Home Alabama (Audio).mp3" type="audio/mp3">
-        </audio>
     </div>
 
-    /
-
+    <audio id="musicBack" loop><source src="../audio/InGame/synthwave_a_lubed_wobble_dance-17409.mp3" type="audio/mp3"></audio>
+      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.2/howler.min.js"></script>
     <script src="../js/inicio.js"></script>
     <script src="../js/game.js"></script>
     

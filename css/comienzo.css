@@ -3,18 +3,21 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: #2a5c0b;
+    background-color: #042608;
 }
 
 #container{
     background-image: url(../img/background/fondoForm.png);
     background-size: cover;
-    width: 65%; 
-    height: 70%;
-    min-height: 100vh;
+    width: 70%;
+    height: 100%;
+    min-height: 88vh;
+    min-width: 150vh;
+    max-width: 150vh;
     margin-left: auto;
     margin-right: auto;
     padding: 0;
+    background-color: #2a5c0b;
     border-left: 5px solid #808f12;
     border-right: 5px solid #808f12;
     display: flex;

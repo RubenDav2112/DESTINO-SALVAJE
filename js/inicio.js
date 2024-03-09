@@ -1,12 +1,3 @@
-
-var audio = document.getElementById('musicBack');
-var clicked = false;
-
-window.onclick = function() {
-    if(!clicked)
-        audio.play();
-}
-
 function cambiarIcono(){
     var icono = document.getElementById("iconoV");
     var claseActual = icono.className;
@@ -21,18 +12,18 @@ function cambiarIcono(){
 function cambiarIconoM(){
     var musica = document.getElementById("iconoM");
     var imagenActual = musica.src;
-
     if(imagenActual.endsWith("music.png")){
         musica.src = "../img/icons/musicMute.png";
-        clicked=true;
-        audio.pause();
+        musicafondo.pause();
+
     }else{
         musica.src = "../img/icons/music.png";
-        audio.play();
+        musicafondo.play();
     }    
-    
 }
 
 function creditosF(){
     window.location.href = "creditos.html";
 }
+
+const musicafondo = document.getElementById("musicBack");

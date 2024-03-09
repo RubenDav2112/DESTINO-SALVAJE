@@ -24,3 +24,9 @@ function guardarNombre() {
         alert("Ingresa tu nombre amigo!");
     }
 }
+
+window.onload = function() {
+    var audio = document.getElementById('musicBack');
+    audio.play();
+}
+
