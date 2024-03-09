@@ -61,10 +61,13 @@ let numeroNombre = {
 };
 let answers = {};  //animal : paisaje  or animal : nombre
 let correctImage = {}; //div : imagen correcta
+let correctAudio = {} //animal : audio correcto
 let div;
 let count =0; //para saber si ya se completo el nivel, despues de tres arrastres correctos se termina el nivel
 let level = 1; //en que nivel estamos
 let puntos=0;
+let incorrectAudio = new Audio("../audio/InGame/wrong.mp3");
+
 
 shuffleArray(arrayAnimals);
 shuffleArray(arrayDivs1);
@@ -89,16 +92,21 @@ function assignImages(){
         document.getElementById('one').src = "../img/animals/" +arrayAnimals[0]+".png";
         document.getElementById('one').style.display = "block";
         div="one";
+        correctAudio["one"] = "../audio/animal-sounds/"+arrayAnimals[0]+".mp3";
         break;
       case 2:
         document.getElementById('two').src = "../img/animals/" + arrayAnimals[0]+".png";
         document.getElementById('two').style.display = "block";
         div="two";
+        correctAudio["two"] = "../audio/animal-sounds/"+arrayAnimals[0]+".mp3";
+
         break;
       case 3:
         document.getElementById('three').src = "../img/animals/" + arrayAnimals[0]+".png";
         document.getElementById('three').style.display = "block";
         div="three";
+        correctAudio["three"] = "../audio/animal-sounds/"+arrayAnimals[0]+".mp3";
+
         break;
     }
     switch(arrayDivs1[0]){
@@ -146,8 +154,8 @@ function assignImages(){
   arrayDivs2 = [1,2,3];
   shuffleArray(arrayDivs1);
   shuffleArray(arrayDivs2);
-
-  startCron();
+  if(level == 1)
+    startCron();
 
 }
 
@@ -201,6 +209,8 @@ function drop(e,msg){
   if(answers[elementoArrastrado] == e.target.id){
     
     // SONIDO EXITO AQUÍ
+    
+
 
     console.log(" funcion drop "+msg);
     e.preventDefault(); // Para indicar que el soltado es permitido en esa zona porque 
@@ -209,7 +219,12 @@ function drop(e,msg){
     let element = document.getElementById(elementoArrastrado);
     if(element.className == "animalImg"){
       e.target.src=""+correctImage[e.target.id]+""; 
-      
+      // Create an Audio object with the path to your audio file
+      if(document.getElementById("iconoV").className == "fa-solid fa-volume-high"){
+        const audio = new Audio(correctAudio[elementoArrastrado]);
+        // Play the audio
+        audio.play();
+      }
     }else{
       e.target.innerHTML = element.innerHTML;
       
@@ -227,7 +242,11 @@ function drop(e,msg){
     }
 
     //SONIDO ERROR AQUÍ
-    console.log("incorrecto");
+    if(document.getElementById("iconoV").className == "fa-solid fa-volume-high"){
+      console.log("incorrecto");
+      incorrectAudio.play();
+    }
+
   }
   document.getElementById("puntos").innerHTML = "PUNTOS: "+puntos;
 }
@@ -245,7 +264,11 @@ function comprobarPuzzle(){
     }else{
       level++;
       count = 0;
-      assignImages();
+
+      intervalo=setInterval(function(){
+        assignImages();
+        clearInterval(intervalo);
+      }, 2000);
       
     }
   }
