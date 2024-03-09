@@ -10,7 +10,7 @@
 <body>
     <div id="nav">
         <div class="left txtNav"><p id="cronometro">00:00</p></div>
-        <div class="middle txtNav"><p>PUNTOS: 0</p></div>
+        <div class="middle txtNav"><p id="puntos">PUNTOS: 0</p></div>
         <div class="right icons">
             <a id="iconoAudio" onclick="cambiarIcono()">
                 <i id="iconoV" class="fa-solid fa-volume-high" style="color: #ea2a15" ></i>
@@ -30,31 +30,34 @@
     <div class="container">
         <div class="boxes" id="txt"><p>ARRASTRA EL ANIMAL HASTA SU HÁBITAD</p><P>¡NO OLVIDES PONERLE NOMBRE!</P></div>
         <div class="boxes" id="animals">
-            <div class="animalBox"><img src="../img/animals/A.png" alt=""></div>
-            <div class="animalBox"><img src="../img/animals/B.png" alt=""></div>
-            <div class="animalBox"><img src="../img/animals/C.png" alt=""></div>
+            <div  class="animalBox "><img class="animalImg" id="one"  alt="" draggable="true" ondragstart="start(event,'moviendo pieza3')" ondragend="end(event)"></div>
+            <div  class="animalBox "><img class="animalImg" id="two"  alt="" draggable="true" ondragstart="start(event,'moviendo pieza3')" ondragend="end(event)"></div>
+            <div  class="animalBox "><img class="animalImg" id="three"  alt="" draggable="true" ondragstart="start(event,'moviendo pieza3')" ondragend="end(event)"></div>
         </div>
         <div class="boxes" id="habitad">
-            <div class="habitadBox"><img src="../img/animals/AH.webp" alt=""></div>
-            <div class="habitadBox"><img src="../img/animals/BH.webp" alt=""></div>
-            <div class="habitadBox"><img src="../img/animals/CH.webp" alt=""></div>
+            <div  class="habitadBox "><img id="four" src="../img/animals/1.webp" alt="" ondragenter="return enter(event,'origen')" ondragover="return over(event,'origen')" ondrop="return drop(event,'soltando en tablero origen')"></div>
+            <div  class="habitadBox "><img id="five" src="../img/animals/2.webp" alt="" ondragenter="return enter(event,'origen')" ondragover="return over(event,'origen')" ondrop="return drop(event,'soltando en tablero origen')"></div>
+            <div  class="habitadBox "><img id="six" src="../img/animals/3.webp" alt="" ondragenter="return enter(event,'origen')" ondragover="return over(event,'origen')" ondrop="return drop(event,'soltando en tablero origen')"></div>
         </div>
         <div class="boxes" id="forLabel">
-            <div class="forLabels"><button draggable="true" id="draggableButton"></button></div>
-            <div class="forLabels"><button draggable="true" id="draggableButton"></button></div>
-            <div class="forLabels"><button draggable="true" id="draggableButton"></button></div>
+            <div  class="forLabels"><button id="ten" ondragenter="return enter(event,'origen')" ondragover="return over(event,'origen')" ondrop="return drop(event,'soltando en tablero origen')"></button></div>
+            <div  class="forLabels"><button id="eleven" ondragenter="return enter(event,'origen')" ondragover="return over(event,'origen')" ondrop="return drop(event,'soltando en tablero origen')"></button></div>
+            <div  class="forLabels"><button id="twelve" ondragenter="return enter(event,'origen')" ondragover="return over(event,'origen')" ondrop="return drop(event,'soltando en tablero origen')"></button></div>
         </div>
         <div class="boxes" id="label">
-            <div class="labels"><button draggable="true" id="draggableButton">ÁGUILA</button></div>
-            <div class="labels"><button draggable="true" id="draggableButton">BÚFALO</button></div>
-            <div class="labels"><button draggable="true" id="draggableButton">COCODRILO</button></div>
+            <div class="labels"><button id="seven"  draggable="true" ondragstart="start(event,'moviendo pieza3')" ondragend="end(event)">ÁGUILA</button></div>
+            <div class="labels"><button id="eight" draggable="true" ondragstart="start(event,'moviendo pieza3')" ondragend="end(event)">BÚFALO</button></div>
+            <div class="labels"><button id="nine" draggable="true" ondragstart="start(event,'moviendo pieza3')" ondragend="end(event)">COCODRILO</button></div>
         </div>
         <audio id="musicBack" loop>
             <source src="../audio/Lynyrd Skynyrd - Sweet Home Alabama (Audio).mp3" type="audio/mp3">
         </audio>
     </div>
 
-    <script src="../js/cronometro.js"></script>
+    /
+
     <script src="../js/inicio.js"></script>
+    <script src="../js/game.js"></script>
+    
 </body>
 </html>
