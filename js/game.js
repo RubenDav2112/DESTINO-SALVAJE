@@ -34,7 +34,7 @@ function shuffleArray(array) {
   }
 }
 
-let arrayAnimals = [1, 2, 3, 4, 5, 6]; //indicar el orden en que aparecen las imagenes
+let arrayAnimals = [1, 2, 3, 4, 5, 6, 7, 8, 9]; //indicar el orden en que aparecen las imagenes
 let arrayDivs1 = [1,2,3]; //el orden en que se asignan los paisajes
 let arrayDivs2 = [1,2,3]; //orden de los nombres 
 let numeroNombre = {
@@ -44,7 +44,9 @@ let numeroNombre = {
   4: 'Cocodrilo',
   5: 'Orca',
   6: 'Tigre',
-  7: 'Pinguino'
+  7: 'Pinguino',
+  8: 'Leon',
+  9: 'Lobo',
 };
 let answers = {};  //animal : paisaje  or animal : nombre
 let correctImage = {}; //div : imagen correcta
