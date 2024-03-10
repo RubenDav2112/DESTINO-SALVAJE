@@ -5,6 +5,11 @@ var intervalo;
 var segundos = 0;
 var minutos = 0;
 
+// Variables que leen el nombre del jugador desde la URL
+var params = new URLSearchParams(window.location.search);
+var nombre = params.get('nombre');
+
+
 
 function startCron(){
   var segundos = 0;
@@ -243,7 +248,7 @@ function comprobarPuzzle(){
     
     if(level == 2){
       //fin juego
-
+      window.location.href = "felicitacion.html?nombre=" + encodeURIComponent(nombre);
     }else{
       level++;
       count = 0;

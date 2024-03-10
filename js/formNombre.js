@@ -29,3 +29,4 @@ window.onload = function() {
     var audio = document.getElementById('musicBack');
     audio.play();
 }
+
