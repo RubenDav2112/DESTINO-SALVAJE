@@ -19,6 +19,13 @@ function guardarNombre() {
 
             localStorage.setItem("datos_" + nombre, JSON.stringify(datos));
         }
+
+        // Nombre del jugador actual
+        var datos = {
+            nombre: nombre
+        };
+        localStorage.setItem("jugador", JSON.stringify(datos));
+
         window.location.href = "comienzo.html?nombre=" + encodeURIComponent(nombre);
     } else {
         alert("Ingresa tu nombre amigo!");

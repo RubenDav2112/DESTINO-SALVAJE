@@ -29,16 +29,22 @@ window.onload = function() {
         
             if (datosAlmacenados) {
                 var datosJugador = JSON.parse(datosAlmacenados);
-                
+              
                 if (datosJugador.tiempo && datosJugador.puntuacion) {
-                    ctx.font = "bold 30px Times New Roman";
-                    ctx.fillText("Tiempo: " + datosJugador.tiempo, 140, 470);
-                    ctx.fillText("Puntos: " + datosJugador.puntuacion, 480, 470);
-                }else{
-                    ctx.font = "bold 30px Times New Roman";
-                    ctx.fillText("No tienes puntuación aún", 230, 470);
+                  ctx.font = "bold 30px Times New Roman";
+              
+                  const minutos = Math.floor(datosJugador.tiempo / 60);
+                  const segundos = Math.floor(datosJugador.tiempo % 60);
+                  const tiempoFormateado = `${minutos.toString().padStart(2, "0")}:${segundos.toString().padStart(2, "0")}`;
+              
+                  ctx.fillText("Tiempo " + tiempoFormateado, 140, 470);
+                  ctx.fillText("Puntos: " + datosJugador.puntuacion, 480, 470);
+                } else {
+                  ctx.font = "bold 30px Times New Roman";
+                  ctx.fillText("No tienes puntuación aún", 230, 470);
                 }
-            }
+              }
+              
         } else {
             ctx.fillText("No se encontró el jugador :( ", 10, 120);
         }

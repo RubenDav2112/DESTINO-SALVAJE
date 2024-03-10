@@ -214,8 +214,8 @@ function drop(e,msg){
     }
     element.style.display = "none";
     console.log(""+correctImage[e.target.id]+"");
-    comprobarPuzzle();
     puntos+=10;
+    comprobarPuzzle();
   }else{
     //bajar puntos
     if(level == 1){
@@ -243,7 +243,16 @@ function comprobarPuzzle(){
     
     if(level == 2){
       //fin juego
-
+      var time = (minutos*60)+segundos;
+      var datosGuardados = localStorage.getItem("jugador");
+      var datosParseados = JSON.parse(datosGuardados);
+      const datos = {
+        nombre: datosParseados.nombre,
+        tiempo: time,
+        puntuacion: puntos,
+      };
+      localStorage.setItem("datos_" + datosParseados.nombre, JSON.stringify(datos));
+      
     }else{
       level++;
       count = 0;
