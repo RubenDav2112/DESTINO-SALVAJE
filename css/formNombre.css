@@ -8,7 +8,7 @@ body {
 }
 
 #container{
-    background-image: url(../img/fondoForm.png);
+    background-image: url(../img/background/fondoForm.png);
     background-size: cover;
     width: 70%;
     height: 100%;
