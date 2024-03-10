@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RANKINGS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a99fa1f648.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/rankings.css">
+</head>
+<body>
+    <script src="../js/rankings.js"></script>
+
+    <div id="container">
+       
+        <div id="rankings">
+             <h3>RANKINGS</h3>
+            <div id="rankingsContainer">
+                <div class="fila">
+                    <div class="titulo">Nombre</div>
+                    <div class="titulo">Tiempo</div>
+                    <div class="titulo">Puntuación</div>
+                </div>
+            </div>
+            
+        </div>
+        <div id="iconos">
+            <div class="icons">       
+            <a id="iconoExit"  href="#" onclick="salir()"><i id="iconoS" class="fa-solid fa-right-from-bracket" style="color: red; width: 100px; height: 100px;" ></i></a>
+            </div> 
+        </div>
+        
+    </div>
+
+
+
+<script>
+        function salir(){
+                window.location.href = 'inicio.html';
+        }
+</script>
+</body>
+</html>
