@@ -56,3 +56,25 @@ a:hover {
     justify-content: center;
     align-items: center;
 }
+
+button {
+    font-weight: bold;
+    color: white;
+    background-color: #ea2a15;
+    font-size: 2vw; 
+    cursor: pointer;
+    border-radius: 15px;
+    height: 5vh; 
+    margin-top: 6vh; 
+    margin-left: 40px;
+    margin-right: 40px;
+    width: 12vw; 
+    border: none;
+    text-align: center;
+    text-decoration: none;
+}
+
+button:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
