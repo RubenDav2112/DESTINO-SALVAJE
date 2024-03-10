@@ -39,7 +39,7 @@ function shuffleArray(array) {
   }
 }
 
-let arrayAnimals = [1, 2, 3, 4, 5, 6]; //indicar el orden en que aparecen las imagenes
+let arrayAnimals = [1, 2, 3, 4, 5, 6, 7, 8, 9]; //indicar el orden en que aparecen las imagenes
 let arrayDivs1 = [1,2,3]; //el orden en que se asignan los paisajes
 let arrayDivs2 = [1,2,3]; //orden de los nombres 
 let numeroNombre = {
@@ -49,16 +49,20 @@ let numeroNombre = {
   4: 'Cocodrilo',
   5: 'Orca',
   6: 'Tigre',
-  7: 'Pinguino'
+  7: 'Pinguino',
+  8: 'Leon',
+  9: 'Lobo',
 };
 let answers = {};  //animal : paisaje  or animal : nombre
 let correctImage = {}; //div : imagen correcta
 let correctAudio = {} //animal : audio correcto
+let correctReading = {}; //div : lectura correcta
 let div;
 let count =0; //para saber si ya se completo el nivel, despues de tres arrastres correctos se termina el nivel
 let level = 1; //en que nivel estamos
 let puntos=0;
 let incorrectAudio = new Audio("../audio/InGame/wrong.mp3");
+
 
 
 shuffleArray(arrayAnimals);
@@ -122,16 +126,20 @@ function assignImages(){
         document.getElementById('seven').innerHTML = numeroNombre[arrayAnimals[0]];
         document.getElementById('seven').style.display = "block";
         answers["seven"] = div;
+        correctReading["seven"] = "../audio/animal-sounds/"+arrayAnimals[0]+""+arrayAnimals[0]+".mp3";
         break;
       case 2:
         document.getElementById('eight').innerHTML = numeroNombre[arrayAnimals[0]];
         document.getElementById('eight').style.display = "block";
         answers["eight"] = div;
+        correctReading["eight"] = "../audio/animal-sounds/"+arrayAnimals[0]+""+arrayAnimals[0]+".mp3";
+
         break;
       case 3:
         document.getElementById('nine').innerHTML = numeroNombre[arrayAnimals[0]];
         document.getElementById('nine').style.display = "block";
         answers["nine"] = div;
+        correctReading["nine"] = "../audio/animal-sounds/"+arrayAnimals[0]+""+arrayAnimals[0]+".mp3";
         break;
     }
     arrayDivs1.shift();
@@ -215,6 +223,10 @@ function drop(e,msg){
       }
     }else{
       e.target.innerHTML = element.innerHTML;
+      if(document.getElementById("iconoV").className == "fa-solid fa-volume-high"){
+        const audio2 = new Audio(correctReading[elementoArrastrado]);
+        audio2.play();
+      }
       
     }
     element.style.display = "none";
