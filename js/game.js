@@ -270,9 +270,12 @@ function comprobarPuzzle(){
         puntuacion: puntos,
       };
       localStorage.setItem("datos_" + datosParseados.nombre, JSON.stringify(datos));
-
-      window.location.href = "felicitacion.html?nombre=" + encodeURIComponent(nombre);
-
+      setTimeout(() => {
+        exito.play();;
+      }, 2000);
+      setTimeout(() => {
+        window.location.href = "felicitacion.html?nombre=" + encodeURIComponent(nombre);
+      }, 5000);
     }else{
       level++;
       count = 0;
@@ -285,3 +288,4 @@ function comprobarPuzzle(){
     }
   }
 }
+const exito = document.getElementById("exitoSound");
